@@ -14,10 +14,31 @@
         
         <h1>Audio Video Recorder</h1>
         <video id="recordedVideo" controls autoplay></video>
+        <canvas id="filteredCanvas"></canvas>
         <div class="button-container">
             <button id="startButton" class="recordButton">Start Recording</button>
             <button id="stopButton" class="recordButton" disabled>Stop Recording</button>
         </div>
+        <div class="filter-div">
+            <label class ="filter-label" for="filterSelect">Choose a filter -</label>
+
+        <select id="filterSelect">
+            <option value="">None</option>
+            <option value="grayscale(1)">Grayscale</option>
+            <option value="sepia(1)">Sepia</option>
+            <option value="invert(1)">Invert</option>
+            <option value="blur(5px)">Blur</option>
+            <option value="contrast(2)">High Contrast</option>
+            <option value="brightness(1.5)">Brightness</option>
+        </select>
+        </div>
+        <div class="voice-command-div">
+            <button id="voiceCommandButton" class="voice-command-btn">Start Voice Command</button>
+            <button id="stopVoiceCommandButton" class="voice-command-btn" >Stop Voice Command</button>
+            <h3 id="voice-command-text">For Toggle Theme , say : "change to dark/light mode"</h3>
+            <h3 id="voice-command-text">To Start/Stop Recording , say : "start/stop recording"</h3>
+        </div>
+        
     </div>
     <script src="integration/script.js"></script>
 </body>
